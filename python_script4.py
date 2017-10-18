@@ -25,3 +25,8 @@ dna_complement = compATGC.upper()
 
 dna_reverse_complement = dna_complement[::-1]
 
+#EcoR1 recognition start and site report. EcoR1 = 5' GAATTC 3'
+
+ecor1_start_site = 1 + int(dna.find("GAATTC"))
+ecor1_end_site = ecor1_start_site + 5
+
