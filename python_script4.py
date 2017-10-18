@@ -48,7 +48,10 @@ print(ecor1_print.format(0, ecor1_frag1, ecor1_cut_site, ecor1_frag2))
 ecor1_fragments_list = [ecor1,str(ecor1_start_site), str(ecor1_end_site)]
 
 
+#put EcoR1 restriction fragments into a list and sort.
 
+frag_list = [ecor1_frag1, ecor1_frag2]
+frag_list.sort()
 
 
 
