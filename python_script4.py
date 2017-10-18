@@ -15,11 +15,11 @@ cg_content = dna.count('C') + dna.count('G')
 
 #complement ATGC sequence in dna by sequential replacing USING CASE AS A DINSTINGUISHER--use loop later.
 compA = dna.replace('A', 't')
-compAT = dna.replace('T', 'a')
-compATG = dna.replace('G', 'c')
-compATGC = dna.replace('C', 'g')
+compAT = compA.replace('T', 'a')
+compATG = compAT.replace('G', 'c')
+compATGC = compATG.replace('C', 'g')
 
-dna_complement = comptATGC.upper()
+dna_complement = compATGC.upper()
 
 #reversing a string [begin:end:step] is extended slice syntax. Leaving begin and end off and specifying a step of -1, it reverses a string
 
