@@ -42,3 +42,31 @@ for num in numbers:
 print(even_sum)
 print(odd_sum)
 
+
+#pop() and remove() exercise with number list
+
+print(numbers)
+numbers_popped = numbers.pop() #excises last indexed unit in list, stores it in numbers_pop variable
+print(numbers)
+print(numbers_popped)
+
+print(numbers)
+numbers_removed = numbers.remove(2) #removes defined object at lowest index. DOES NOT RETURN THE OBJECT: I.E. CANNOT STORE IN VARIABLE
+print(numbers)
+print(numbers_removed)
+
+
+#For loops and range() function
+
+#print numbers 0 to 99 with for loop and range function
+for num in range(100):
+	print(num)
+
+#print numbers 1 to 100 with for loop and range function
+for num in range(101):
+	if num > 0:
+		print(num)
+
+
+
+
