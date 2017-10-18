@@ -69,4 +69,12 @@ for num in range(101):
 
 
 
+#create a loop that iterates over below list and prints out position of item in list, lenght of item, and item sequence.
+seqs = ['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']
 
+seq_position = 0 #for counting and printing the location of the item in the list, not using zero index for printing
+for seq in seqs:
+	seq_position +=1 #so as to increase the count and keep proper track of each items position
+	print(seq_position,"\t", len(seq),"\t", seq,"\n")
+	if seq_position == len(seqs): #stops counting and terminates in tandem with end of list
+		break
