@@ -27,6 +27,15 @@ dna_reverse_complement = dna_complement[::-1]
 
 #EcoR1 recognition start and site report. EcoR1 = 5' GAATTC 3'
 
+ecor1 = "GAATTC"
 ecor1_start_site = 1 + int(dna.find("GAATTC"))
 ecor1_end_site = ecor1_start_site + 5
+
+ecor1_print = '''The recognition sequence for EcoR1 is {0}.
+The recognition start site is located at {1} and ends at {2}.'''
+
+print(ecor1_print.format(ecor1, ecor1_start_site, ecor1_end_site))
+
+
+
 
