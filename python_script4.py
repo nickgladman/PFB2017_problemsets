@@ -10,7 +10,7 @@ dna = GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGA
 #counts A and T content
 at_content = dna.count('T') + dna.count('A')
 
-#counts C and G content
+#counts C and G contentcut = ecor1_end_site = ecor1_start_site + 5ecor1_cut_site = 2cut = ecor1_end_site = ecor1_start_site + 5ecor1_cut_site = 2 
 cg_content = dna.count('C') + dna.count('G')
 
 #complement ATGC sequence in dna by sequential replacing USING CASE AS A DINSTINGUISHER--use loop later.
@@ -28,17 +28,20 @@ dna_reverse_complement = dna_complement[::-1]
 #EcoR1 recognition start and site report. EcoR1 = 5' GAATTC 3'
 
 ecor1 = "GAATTC"
-ecor1_start_site = 1 + int(dna.find("GAATTC"))
-ecor1_cut_site = 2 + int(dna.find("GAATCC"))
+ecor1_start_site = 1 + int(dna.find("GAATTC")) #using this as the fragment generator will proper slice the stirngs at the restriction location
+ecor1_cut_site = 1 + ecor1_start_site
 ecor1_end_site = ecor1_start_site + 5
+
+#extract restriction fragments annd print with tab delimeter
+ecor1_frag1 = dna[0:ecor1_start_site]
+ecor1_frag2 = dna[ecor1_start_site:]
 
 #formating output of above scripts to print out a string with given indexes
 #and is tab separated
-ecor1_print = '''The recognition sequence, start, and end site for EcoR1 are: 
-{0}\t{1}\t{2}.'''
+ecor1_print = '''The Ecor1 restriction locations and product are:
+{0}\t{1}\t{2}\t{3}.'''
 
-print(ecor1_print.format(ecor1, ecor1_start_site, ecor1_end_site))
-
+print(ecor1_print.format(0, ecor1_frag1, ecor1_cut_site, ecor1_frag2))
 
 #add the restriction fragments to a list
 
