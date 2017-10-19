@@ -174,5 +174,30 @@ for nt in seq:
 	else:
 		N = N + 1	
 	
+#or better with dictionary:
+
+seqs = "AATTGGCC"
+
+d = {}
+
+for nt in seqs:
+	if nt not in d:
+		d[nt] = 0
+	d[nt] += 1  # d[nt] = d[nt] +1
+
+print(d) 
 
 
+
+
+
+#problem 16 set interrogation
+
+setA = {3, 14, 15, 9, 26, 5, 35, 9}
+setB = {60, 22, 14, 0, 9}
+
+# find intersection, difference, union and symetrical differences between the above two sets
+interAB = setA & setB
+diffAB = setA - setB
+unionAB = setA | setB
+symAB = setA ^ setB
