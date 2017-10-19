@@ -182,7 +182,7 @@ d = {}
 
 for nt in seqs:
 	if nt not in d:
-		d[nt] = 0
+		d[nt] = 0 # we have to define what the value is before we can iterate over it (add to it) in the line below
 	d[nt] += 1  # d[nt] = d[nt] +1
 
 print(d) 
