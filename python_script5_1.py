@@ -7,4 +7,5 @@ number1 = int(sys.argv[1])
 number2 = 1 + int(sys.argv[2])
 
 for num in range(number1, number2, 1):
-	print(num)
+	if num % 2 == 0:
+		print(num)
